@@ -22,11 +22,15 @@
         "prepare": "husky"
     },
     "dependencies": {
+        "@formity/react": "^0.3.0",
+        "@hookform/resolvers": "^3.10.0",
         "@svg-use/react": "^0.4.3",
         "@tanstack/react-router": "^1.95.3",
         "clsx": "^2.1.1",
         "react": "^19.0.0",
-        "react-dom": "^19.0.0"
+        "react-dom": "^19.0.0",
+        "react-hook-form": "^7.54.2",
+        "zod": "^3.24.1"
     },
     "devDependencies": {
         "@commitlint/cli": "^19.6.1",
