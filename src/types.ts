@@ -8,3 +8,8 @@ export type WithClassName<T> = T & {
 };
 
 export type SetStateValue<T> = React.Dispatch<React.SetStateAction<T>>;
+
+export type SelectOption = {
+    label: string;
+    value: string;
+};

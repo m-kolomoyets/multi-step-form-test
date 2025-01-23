@@ -6,6 +6,7 @@ import react from '@vitejs/plugin-react';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig } from 'vite';
 import eslint from 'vite-plugin-eslint2';
+import tailwindcss from 'tailwindcss';
 
 // https://vitejs.dev/config/
 export default defineConfig(() => {
@@ -19,6 +20,11 @@ export default defineConfig(() => {
                 filename: './tmp/bundle-visualizer.html',
             }),
         ],
+        css: {
+            postcss: {
+                plugins: [tailwindcss()],
+            },
+        },
         build: {
             target: ['es2021', 'edge91', 'firefox90', 'chrome91', 'safari15', 'opera77'],
             assetsInlineLimit(filePath) {
