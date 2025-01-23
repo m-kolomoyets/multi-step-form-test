@@ -1,6 +1,6 @@
 import { createLazyFileRoute } from '@tanstack/react-router';
-import Home from '@/modules/Home';
+import MultiStepForm from '@/modules/MultiStepForm';
 
 export const Route = createLazyFileRoute('/')({
-    component: Home,
+    component: MultiStepForm,
 });
