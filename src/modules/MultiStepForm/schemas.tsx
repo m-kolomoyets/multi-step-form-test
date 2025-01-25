@@ -1,25 +1,15 @@
-import type { Cond, Form, Return, Schema, Variables } from '@formity/react';
-import type { CompanyDetailsStepValues } from './components/CompanyDetailsStep/types';
-import type { ContactDetailsStepValues } from './components/ContactDetailsStep/types';
-import type { PlanAffiliatesStepValues } from './components/PlanAffiliatesStep/types';
-import type { PlanStepValues } from './components/PlanStep/types';
+import { z } from 'zod';
+import type { Schema } from '@formity/react';
+import type { MultiStepFormValues } from './types';
 import { PLAN_IDS } from '@/constants';
 import CompanyDetailsStep from './components/CompanyDetailsStep';
 import ContactDetailsStep from './components/ContactDetailsStep';
 import PlanAffiliatesStep from './components/PlanAffiliatesStep';
 import PlanStep from './components/PlanStep';
 
-export type MultiStepFormValues = [
-    Form<PlanStepValues>,
-    Variables<PlanStepValues>,
-    Cond<{
-        then: [Form<PlanAffiliatesStepValues>];
-        else: [];
-    }>,
-    Form<ContactDetailsStepValues>,
-    Form<CompanyDetailsStepValues>,
-    Return<ContactDetailsStepValues & CompanyDetailsStepValues>,
-];
+export const multipleFormSearchParamsSchema = z.object({
+    isSuccess: z.boolean().optional(),
+});
 
 export const multiStepFormSchema: Schema<MultiStepFormValues> = [
     {

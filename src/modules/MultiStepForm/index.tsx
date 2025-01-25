@@ -1,6 +1,7 @@
 import { memo, useCallback, useState } from 'react';
-import { multiStepFormSchema, MultiStepFormValues } from './schema';
 import { Formity, OnReturn, ReturnValues } from '@formity/react';
+import type { MultiStepFormValues } from './types';
+import { multiStepFormSchema } from './schemas';
 import ProgressBar from '@/components/MultiStepForm/components/ProgressBar';
 import FormData from './components/FormData';
 
@@ -28,7 +29,7 @@ const MultiStepForm: React.FC = () => {
         );
     }
 
-    return <Formity<MultiStepFormValues> schema={multiStepFormSchema} onReturn={onReturn} />;
+    return <Formity schema={multiStepFormSchema} onReturn={onReturn} />;
 };
 
 export default memo(MultiStepForm);
