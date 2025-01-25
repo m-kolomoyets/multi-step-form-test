@@ -24,6 +24,7 @@
     "dependencies": {
         "@formity/react": "^0.3.0",
         "@hookform/resolvers": "^3.10.0",
+        "@radix-ui/react-avatar": "^1.1.2",
         "@radix-ui/react-label": "^2.1.1",
         "@radix-ui/react-radio-group": "^1.2.2",
         "@radix-ui/react-scroll-area": "^1.2.2",
