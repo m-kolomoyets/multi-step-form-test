@@ -13,6 +13,6 @@ export const createCompany = async () => {
     await sleep(2 * ONE_SECOND);
 
     return {
-        success: false,
+        success: true,
     };
 };

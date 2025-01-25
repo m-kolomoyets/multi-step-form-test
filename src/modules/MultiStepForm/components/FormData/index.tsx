@@ -11,16 +11,14 @@ type FormDataProps = {
 };
 
 const FormData: React.FC<FormDataProps> = ({ data, onStart }) => {
-    const [createCompanyMutationState] = useMutationState<CreateCompanyResponse>({
+    const [isFormSuccess] = useMutationState<boolean>({
         filters: {
             mutationKey: TEST_FORM_MUTATION_KEYS.createCompany(),
         },
         select(state) {
-            return state.state.data as CreateCompanyResponse;
+            return (state.state.data as CreateCompanyResponse).success;
         },
     });
-
-    const isFormSuccess = createCompanyMutationState.success;
 
     return (
         <div className="relative flex h-full w-full items-center justify-center px-4 py-8">
