@@ -53,7 +53,7 @@ const CompanyDetailsStep: React.FC<CompanyDetailsStepProps> = ({ values, inputs,
                             </>
                         }
                         description="Complete the following fields to verify the Company's authenticity and access the personalized health benefits plan"
-                        fields={[
+                        fields={
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <InputField<CompanyDetailsStepValues, 'companyName'>
                                     key="companyName"
@@ -75,8 +75,8 @@ const CompanyDetailsStep: React.FC<CompanyDetailsStepProps> = ({ values, inputs,
                                 />
                                 <InputField<CompanyDetailsStepValues, 'city'> key="city" name="city" label="City" />
                                 <InputField<CompanyDetailsStepValues, 'state'> key="state" name="state" label="State" />
-                            </div>,
-                        ]}
+                            </div>
+                        }
                         button={<Button isLoading={isCreateCompanyPending}>Next</Button>}
                         back={<BackButton />}
                     />

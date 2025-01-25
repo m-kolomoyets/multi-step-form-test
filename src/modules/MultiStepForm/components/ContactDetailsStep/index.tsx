@@ -52,13 +52,13 @@ const ContactDetailsStep: React.FC<ContactDetailsStepProps> = ({ values, inputs,
                             </>
                         }
                         description="Complete the following fields so we know who to connect with"
-                        fields={[
+                        fields={
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <InputField key="firstName" name="firstName" label="First Name" />
                                 <InputField key="lastName" name="lastName" label="Last Name" />
                                 <InputField key="email" name="email" label="Email" />
-                            </div>,
-                        ]}
+                            </div>
+                        }
                         button={<Button isLoading={isCreateContactPending}>Next</Button>}
                         back={<BackButton />}
                     />

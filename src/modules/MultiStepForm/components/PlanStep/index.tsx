@@ -25,11 +25,11 @@ const PlanStep: React.FC<PlanStepProps> = ({ values, ...rest }) => {
                         key={rest.step}
                         heading={<strong>Select Plan</strong>}
                         description="Select the plan for this deal in the field below"
-                        fields={[
+                        fields={
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <SelectField key="plan" name="plan" label="Plan" options={PLAN_OPTIONS} />
-                            </div>,
-                        ]}
+                            </div>
+                        }
                         button={<Button>Next</Button>}
                     />
                 </MultiStepFormView>

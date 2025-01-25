@@ -42,5 +42,5 @@ export type MultiStepFormValues = [
     }>,
     Form<ContactDetailsStepValues>,
     Form<CompanyDetailsStepValues>,
-    Return<ContactDetailsStepValues & CompanyDetailsStepValues>,
+    Return<CompanyDetailsStepValues>,
 ];

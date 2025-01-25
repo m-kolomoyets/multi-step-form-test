@@ -10,7 +10,7 @@ export type MultiStepFormLayoutProps = {
     /**
      * Fields array of the form
      */
-    fields: React.ReactNode[];
+    fields: React.ReactNode;
     /**
      * Button of the form
      */

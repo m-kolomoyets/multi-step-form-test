@@ -26,7 +26,7 @@ const PlanAffiliatesStep: React.FC<PlanAffiliatesStepProps> = ({ values, ...rest
                         key={rest.step}
                         heading={<strong>Originating Affiliate</strong>}
                         description="Use the search field below to find and select the originating affiliate for this deal."
-                        fields={[
+                        fields={
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <UserSelectField
                                     key="affiliate"
@@ -34,8 +34,8 @@ const PlanAffiliatesStep: React.FC<PlanAffiliatesStepProps> = ({ values, ...rest
                                     label="Affiliate"
                                     options={AFFILIATES_OPTIONS}
                                 />
-                            </div>,
-                        ]}
+                            </div>
+                        }
                         button={<Button>Next</Button>}
                         back={<BackButton />}
                     />
