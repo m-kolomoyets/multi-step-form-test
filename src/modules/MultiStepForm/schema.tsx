@@ -1,4 +1,4 @@
-import type { Cond, Form, Return, Schema } from '@formity/react';
+import type { Cond, Form, Return, Schema, Variables } from '@formity/react';
 import type { CompanyDetailsStepValues } from './components/CompanyDetailsStep/types';
 import type { ContactDetailsStepValues } from './components/ContactDetailsStep/types';
 import type { PlanAffiliatesStepValues } from './components/PlanAffiliatesStep/types';
@@ -11,6 +11,7 @@ import PlanStep from './components/PlanStep';
 
 export type MultiStepFormValues = [
     Form<PlanStepValues>,
+    Variables<PlanStepValues>,
     Cond<{
         then: [Form<PlanAffiliatesStepValues>];
         else: [];
@@ -41,6 +42,13 @@ export const multiStepFormSchema: Schema<MultiStepFormValues> = [
                     />
                 );
             },
+        },
+    },
+    {
+        variables({ plan }) {
+            return {
+                plan,
+            };
         },
     },
     {
@@ -84,12 +92,13 @@ export const multiStepFormSchema: Schema<MultiStepFormValues> = [
                     email: ['', []],
                 };
             },
-            render({ values, onNext, onBack, getState, setState }) {
+            render({ values, onNext, onBack, getState, setState, inputs }) {
                 return (
                     <ContactDetailsStep
                         key="contactDetails"
                         step="contactDetails"
                         values={values}
+                        inputs={inputs}
                         onNext={onNext}
                         onBack={onBack}
                         getState={getState}
@@ -110,12 +119,13 @@ export const multiStepFormSchema: Schema<MultiStepFormValues> = [
                     state: ['', []],
                 };
             },
-            render({ values, onNext, onBack, getState, setState }) {
+            render({ values, onNext, onBack, getState, setState, inputs }) {
                 return (
                     <CompanyDetailsStep
                         key="companyDetails"
                         step="companyDetails"
                         values={values}
+                        inputs={inputs}
                         onNext={onNext}
                         onBack={onBack}
                         getState={getState}

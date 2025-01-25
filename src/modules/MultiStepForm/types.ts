@@ -21,4 +21,10 @@ export type MultiFormStepProps = {
      * State setter
      */
     setState: SetState;
+    /**
+     * Inputs
+     */
+    inputs?: {
+        plan?: string;
+    };
 };
