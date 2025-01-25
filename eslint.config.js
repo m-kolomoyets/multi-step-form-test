@@ -30,6 +30,7 @@ export default tseslint.config({
         },
     },
     rules: {
+        ...reactHooksPlugin.configs.recommended.rules,
         'react/react-in-jsx-scope': ['off'],
         'react/prop-types': ['off'],
         'react/no-unused-prop-types': ['error'],
@@ -109,5 +110,7 @@ export default tseslint.config({
         'no-var': ['error'],
         'no-multi-spaces': ['error'],
         'no-control-regex': ['off'],
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'warn',
     },
 });

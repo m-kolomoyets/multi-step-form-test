@@ -7,6 +7,13 @@ export type WithClassName<T> = T & {
     className?: string;
 };
 
+export type Slottable = {
+    /**
+     * If true, the component renders the original component inside the component.
+     */
+    asChild?: boolean;
+};
+
 export type SetStateValue<T> = React.Dispatch<React.SetStateAction<T>>;
 
 export type SelectOption = {

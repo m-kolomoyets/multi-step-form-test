@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import clsx from 'clsx';
-import { Button } from '@/ui/Button';
+import Button from '@/ui/Button';
 import s from './Home.module.css';
 
 const Home: React.FC = () => {

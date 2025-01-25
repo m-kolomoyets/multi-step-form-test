@@ -19,4 +19,4 @@ export type MultiStepFormLayoutProps = {
      * Back button of the form
      */
     back?: React.ReactNode;
-};
+} & React.ComponentProps<'div'>;
