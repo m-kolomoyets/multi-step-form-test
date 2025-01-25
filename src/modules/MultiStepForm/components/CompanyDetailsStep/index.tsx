@@ -2,11 +2,11 @@ import { memo, useCallback } from 'react';
 import { CompanyDetailsStepProps, CompanyDetailsStepValues } from './types';
 import { useCreateCompany } from '@/services/tanstack-query/testForm';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { ArrowLeftIcon } from 'lucide-react';
 import type { MultiStepFormStepSubmitHandler } from '@/components/MultiStepForm/types';
 import { MultiStepFormController } from '@/components/MultiStepForm/context/MultiStepFormControllerContext';
 import { companyContactStepSchema } from './schemas';
 import MultiStepFormLayout from '@/components/layouts/MultiStepFormLayout';
+import BackButton from '@/components/MultiStepForm/components/BackButton';
 import InputField from '@/components/MultiStepForm/components/InputField';
 import MultiStepFormView from '@/components/MultiStepForm/components/MultiStepFormView';
 import NumericInputField from '@/components/MultiStepForm/components/NumericInputField';
@@ -71,12 +71,7 @@ const CompanyDetailsStep: React.FC<CompanyDetailsStepProps> = ({ values, ...rest
                         </div>,
                     ]}
                     button={<Button isLoading={isCreateCompanyPending}>Next</Button>}
-                    back={
-                        <Button variant="secondary">
-                            <ArrowLeftIcon />
-                            Back
-                        </Button>
-                    }
+                    back={<BackButton />}
                 />
             </MultiStepFormView>
         </MultiStepFormController>

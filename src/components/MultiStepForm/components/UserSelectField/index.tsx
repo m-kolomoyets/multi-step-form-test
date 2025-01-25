@@ -55,7 +55,7 @@ const UserSelectField: React.FC<UserSelectFieldProps> = ({ name, label, options 
                                         const fallbackColor = AVATAR_FALLBACK_COLORS_CLASSES[index];
 
                                         return (
-                                            <SelectItem value={option.value}>
+                                            <SelectItem key={option.value} value={option.value}>
                                                 <span className="flex items-center gap-2">
                                                     <Avatar className="size-6">
                                                         <AvatarImage className="!rounded-md" src={option.avatarUrl} />

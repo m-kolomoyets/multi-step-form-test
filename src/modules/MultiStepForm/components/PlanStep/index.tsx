@@ -12,7 +12,12 @@ import Button from '@/ui/Button';
 const PlanStep: React.FC<PlanStepProps> = ({ values, ...rest }) => {
     return (
         <MultiStepFormController {...rest}>
-            <MultiStepFormView defaultValues={values} resolver={zodResolver(planSchema)}>
+            <MultiStepFormView
+                defaultValues={values}
+                resolver={zodResolver(planSchema)}
+                // eslint-disable-next-line no-console
+                onError={console.error}
+            >
                 <MultiStepFormLayout
                     key={rest.step}
                     heading={<strong>Select Plan</strong>}

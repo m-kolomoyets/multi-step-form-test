@@ -6,6 +6,7 @@ import type { MultiStepFormStepSubmitHandler } from '@/components/MultiStepForm/
 import { MultiStepFormController } from '@/components/MultiStepForm/context/MultiStepFormControllerContext';
 import { createContactStepSchema } from './schemas';
 import MultiStepFormLayout from '@/components/layouts/MultiStepFormLayout';
+import BackButton from '@/components/MultiStepForm/components/BackButton';
 import InputField from '@/components/MultiStepForm/components/InputField';
 import MultiStepFormView from '@/components/MultiStepForm/components/MultiStepFormView';
 import Button from '@/ui/Button';
@@ -52,6 +53,7 @@ const ContactDetailsStep: React.FC<ContactDetailsStepProps> = ({ values, ...rest
                         </div>,
                     ]}
                     button={<Button isLoading={isCreateContactPending}>Next</Button>}
+                    back={<BackButton />}
                 />
             </MultiStepFormView>
         </MultiStepFormController>

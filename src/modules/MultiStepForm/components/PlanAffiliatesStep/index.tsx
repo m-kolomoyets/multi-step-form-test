@@ -5,6 +5,7 @@ import { MultiStepFormController } from '@/components/MultiStepForm/context/Mult
 import { AFFILIATES_OPTIONS } from './constants';
 import { planAffiliatesStepSchema } from './schemas';
 import MultiStepFormLayout from '@/components/layouts/MultiStepFormLayout';
+import BackButton from '@/components/MultiStepForm/components/BackButton';
 import MultiStepFormView from '@/components/MultiStepForm/components/MultiStepFormView';
 import UserSelectField from '@/components/MultiStepForm/components/UserSelectField';
 import Button from '@/ui/Button';
@@ -33,6 +34,7 @@ const PlanAffiliatesStep: React.FC<PlanAffiliatesStepProps> = ({ values, ...rest
                         </div>,
                     ]}
                     button={<Button>Next</Button>}
+                    back={<BackButton />}
                 />
             </MultiStepFormView>
         </MultiStepFormController>

@@ -1,4 +1,3 @@
-import { FieldValues } from 'react-hook-form';
 import type { GetState, OnBack, OnNext, SetState } from '@formity/react';
 
 export type MultiFormStepProps = {
